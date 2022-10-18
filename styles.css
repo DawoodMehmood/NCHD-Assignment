@@ -1,0 +1,691 @@
+body {
+    margin: 0%;
+    padding: 0%;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-heading {
+    display: flex;
+    align-items: center;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+}
+
+.search {
+    position: relative;
+    left: 35rem;
+    border: 2px solid;
+    padding: 5px;
+}
+
+.nav-bar {
+    background-color: orange;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-bar a:hover {
+    color: black;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 2.15rem;
+    left: -2rem;
+    background-color: #f1f1f1;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 1rem;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 14px 16px;
+    font-size: 14px;
+    text-decoration: none;
+    border-bottom: 1px solid orange;
+    border-left: 10px solid orange;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 16px;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+
+/* Latest updates cards */
+
+.blog-card {
+    display: block;
+    position: relative;
+    top: 7vw;
+    width: 300px;
+    height: 250px;
+    margin: auto;
+    box-shadow: 0 2px 8px rgba(131, 131, 131, 0.85);
+    transition: all 450ms ease-out 0s;
+    overflow: hidden;
+}
+
+.blog-card .blog-img {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    height: 100%;
+    top: -9999px;
+    left: -9999px;
+    right: -9999px;
+    bottom: -9999px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.blog-card:hover {
+    box-shadow: 0 2px 15px rgba(77, 77, 77, 0.85);
+}
+
+.blog-card:hover .text-overlay {
+    background: rgba(255, 255, 255, 0.9);
+    height: 50%;
+    top: 50%;
+    transition: all 450ms ease-in-out 0s;
+}
+
+.blog-card:hover p {
+    height: 60px;
+    transition: all 350ms ease-in-out 0s;
+}
+
+.blog-card:hover p a {
+    visibility: visible;
+}
+
+.text-overlay {
+    position: relative;
+    background: rgba(255, 255, 255, 0.65);
+    width: 100%;
+    height: 40%;
+    top: 60%;
+    box-shadow: 0 -2px 12px rgba(78, 78, 78, 0.3);
+    padding: 10px 10px;
+    overflow: hidden;
+    transition: all 450ms ease-in-out 0s;
+    cursor: pointer;
+}
+
+.text-overlay h2 {
+    color: rgba(0, 0, 0, 0.85);
+    letter-spacing: 0.0225em;
+    width: auto;
+    margin: 0;
+}
+
+.text-overlay p {
+    color: #555;
+    width: 380px;
+    height: 38px;
+    margin: 8px 0;
+    line-height: 1.25;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.text-overlay a {
+    color: #378aee;
+    text-decoration: none;
+    transition: all 350ms linear;
+    visibility: hidden;
+}
+
+.text-overlay a:hover {
+    color: #378aee;
+    border-bottom: 1px solid #378aee;
+}
+
+/* placing the cards */
+
+* {
+    box-sizing: border-box;
+}
+
+/* .floatLeft {
+    float: left;
+} */
+
+.clearRow {
+    clear: left;
+    margin-bottom: 200px;
+}
+
+.clear {
+    clear: both;
+}
+
+/* Float four columns side by side */
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+/* .row {margin: 0 -5px;} */
+
+/* Clear floats after the columns */
+/* .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  } */
+
+.horizontal-bar h2:before {
+    background: orange;
+    height: 4px;
+    width: 208px;
+    margin-left: -104px;
+    left: 50%;
+    position: absolute;
+    top: 15px;
+    content: '';
+}
+
+.horizontal-bar h2 {
+    text-align: center;
+    font-weight: 1000;
+    padding-top: 24px;
+    position: relative;
+    margin-bottom: 0;
+}
+
+.photo {
+    margin: 10px 40px 10px 50px;
+}
+
+.horizontal-space {
+    width: 100%;
+    height: 75px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.viewmore-button {
+    /* padding-right: 25px; */
+    border-radius: 4px;
+    background: rgb(255, 184, 52);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 1000;
+    text-align: center;
+    display: inline-block;
+    width: 138px;
+    height: 40px;
+    transition: all linear 0.3s;
+    text-decoration: none;
+    position: relative;
+    line-height: 42px;
+    margin-bottom: 15px;
+}
+
+.arrow {
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+}
+
+.viewmore-button:hover {
+    background: orange;
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.marquee {
+    margin-top: -2px;
+    background: url(http://www.nchd.org.pk/ws/images/latest_news_slider.png);
+    background-repeat: no-repeat;
+    padding-left: 117px;
+    padding-top: 2px;
+    margin-bottom: 5px;
+}
+
+marquee {
+    font-weight: 700;
+    color: red;
+    font-size: 17px;
+}
+
+.news-box {
+    width: 85%;
+    border-radius: 5px;
+    margin: 0px 50px 24px 110px;
+    position: relative;
+    float: left;
+}
+
+.news-box .content {
+    width: 100%;
+    background: #fddfb2;
+    float: left;
+    /* cursor: pointer; */
+    text-decoration: none;
+    padding: 16px;
+}
+
+.news-box .content:hover {
+    background: #fcd17c;
+}
+
+.news-box i {
+    color: #1A78EE;
+    font-size: 14px;
+    font-weight: 1000;
+    line-height: 24px;
+    font-style: normal;
+    background: #cccaca;
+    /* display: inline-block; */
+    margin: 5px 30px 0px 10px;
+    border-radius: 4px;
+    padding: 0px 10px;
+    float: right;
+
+}
+
+.news-box span {
+    color: #000;
+    font-size: 18px;
+    font-weight: 1000;
+    line-height: 24px;
+    margin-left: 20px;
+}
+
+.news-box ul {
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 10px;
+    padding-right: 40px;
+}
+
+/* ul {
+    color: rgb(0, 0, 0);
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-bottom: 10px;
+    padding-right: 40px;
+} */
+
+/* .horizontal-space-news {
+    width: 100%;
+    height: 1900px;
+  } */
+
+table {
+    border-spacing: 1;
+    border-collapse: collapse;
+    background: rgb(255, 255, 255);
+    border-radius: 6px;
+    overflow: hidden;
+    max-width: 800px;
+    width: 100%;
+    margin: 40px auto;
+    position: relative;
+}
+
+table td,
+table th {
+    padding-left: 8px;
+}
+
+table thead tr {
+    height: 60px;
+    background: rgb(255, 184, 52);
+    font-size: 19px;
+}
+
+table tbody tr {
+    height: 48px;
+    border-bottom: 1px solid #e0ba12;
+}
+
+/* table tbody tr:last-child {
+    border: 0;
+} */
+table td,
+table th {
+    text-align: center;
+}
+
+/* table td.l, table th.l {
+    text-align: right;
+}
+table td.c, table th.c {
+    text-align: center;
+}
+table td.r, table th.r {
+    text-align: center;
+} */
+
+
+
+/* STYLES SPECIFIC TO FOOTER  */
+footer {
+    width: 100%;
+    position: relative;
+    height: auto;
+    background-color: #01360a;
+}
+
+footer .col {
+    width: auto;
+    height: auto;
+    float: left;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0px 20px 20px 20px;
+}
+
+footer .col h1 {
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 17px;
+    padding: 20px 0px 5px 0px;
+    color: rgb(255, 255, 255);
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.250em;
+}
+
+footer .col ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer .col ul li {
+    color: #999999;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: bold;
+    padding: 5px 0px 5px 0px;
+    cursor: pointer;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+}
+
+.social ul li {
+    display: inline-block;
+    padding-right: 5px !important;
+}
+
+footer .col ul li:hover {
+    color: #ffffff;
+    transition: .1s;
+    -webkit-transition: .1s;
+    -moz-transition: .1s;
+}
+
+footer .contain{
+    margin-left: 170px;
+}
+
+
+
+/*
+This is the css for body of carousel
+*/
+.body2{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .slider{
+    width: 900px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .slides{
+    width: 500%;
+    height: 500px;
+    display: flex;
+  }
+  
+  .slides input{
+    display: none;
+  }
+  
+  .slide{
+    width: 20%;
+    transition: 2s;
+  }
+  
+  .slide img{
+    width: 900px;
+    height: 500px;
+  }
+  
+  .andar{
+    position: absolute;
+    z-index: 1;
+    color: white;
+    
+  }
+  
+  /*css for manual slide navigation*/
+  
+  .navigation-manual{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+    margin-left: 54px;
+  }
+  
+  .manual-btn{
+    border: 2px solid orange;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+  }
+  
+  .manual-btn:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  .manual-btn:hover{
+    background: orange;
+  }
+  
+  #radio1:checked ~ .first{
+    margin-left: 0;
+  }
+  
+  #radio2:checked ~ .first{
+    margin-left: -20%;
+  }
+  
+  #radio3:checked ~ .first{
+    margin-left: -40%;
+  }
+  
+  #radio4:checked ~ .first{
+    margin-left: -60%;
+  }
+  #radio5:checked ~ .first{
+    margin-left: -80%;
+  }
+  #radio6:checked ~ .first{
+    margin-left: -100%;
+  }
+  
+  /*css for automatic navigation*/
+  
+  .navigation-auto{
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+    margin-left: 54px;
+  }
+  
+  .navigation-auto div{
+    border: 2px solid orange;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+  }
+  
+  .navigation-auto div:not(:last-child){
+    margin-right: 40px;
+  }
+  
+  #radio1:checked ~ .navigation-auto .auto-btn1{
+    background: orange;
+  }
+  
+  #radio2:checked ~ .navigation-auto .auto-btn2{
+    background: orange;
+  }
+  
+  #radio3:checked ~ .navigation-auto .auto-btn3{
+    background: orange;
+  }
+  
+  #radio4:checked ~ .navigation-auto .auto-btn4{
+    background: orange;
+  }
+  #radio5:checked ~ .navigation-auto .auto-btn5{
+    background: orange;
+  }
+  #radio6:checked ~ .navigation-auto .auto-btn6{
+    background: orange;
+  }
+        
+  
+  
+  /* Image and Text Side by Side */
+  
+  .row1{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .img1{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .p1{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  
+  
+  /*
+  This is body tag for Image and Text Code
+  */
+  .body1{
+    margin: 0;
+    font-family: sans-serif;
+  }
+  
+  .myFirstDiv{
+    /* background-color: black; */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 40px;
+    width: 60%;
+    margin: 0 auto 0 auto;
+  
+  }
+  .text{
+    width: 50%;
+  }
+  .myFirstDiv img{
+    height: 250px;
+    border: 1px solid black;
+    border-radius: 15px;
+  }
+  
+  .myFirstDiv h1{
+    color: rgb(0, 0, 0);
+    margin: 0;
+  }
+  
+  .myFirstDiv p{
+    color: grey;
+  }
+  
+  .bn3 {
+    display: inline-block;
+    padding: 0.5em 1.7em;
+    margin: 0 0.1em 0.1em 0;
+    border: 0.16em solid rgb(41, 32, 32);
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: black;
+    text-shadow: 0 0.04em 0.04em rgba(20, 13, 11, 0.253);
+    text-align: center;
+    transition: all 0.2s;
+    background-color: rgb(255, 184, 52);
+  }
+  
+  .bn3:hover {
+    color: black;
+    background-color: orange;
+  }
